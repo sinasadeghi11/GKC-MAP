@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+.fullscreen-div-S {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+iframe {
+    position: absolute;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 250px);
+    border: none;
+}
+.video-overlay-S {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Width can be adjusted as needed */
+    padding-bottom: 45.75%; /* This creates the 16:9 aspect ratio */
+    background: #fff;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+    overflow: hidden; /* Ensures the close button stays within the rounded corners */
+}
+.video-content-S {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.SN-close-btn-S {
+    position: absolute;
+    top: 0; /* Aligns with the top edge of the video overlay */
+    right: 0; /* Aligns with the right edge of the video overlay */
+    font-size: 24px;
+    cursor: pointer;
+    background: #fff; /* White background to ensure visibility */
+    border-radius: 50%; /* Circle shape */
+    padding: 8px; /* Space around the '×' character */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1001; /* Above the overlay */
+}
